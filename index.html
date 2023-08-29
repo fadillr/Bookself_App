@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="src/style/global.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bookshelf Apps</h1>
+    <form id="add-book-form">
+      <h2>Tambah Buku Baru</h2>
+      <input type="text" id="title" placeholder="Judul" required>
+      <input type="text" id="author" placeholder="Penulis" required>
+      <input type="number" id="year" placeholder="Tahun" required>
+      <label for="isComplete">Selesai dibaca</label>
+      <input type="checkbox" id="isComplete">
+      <button type="submit">Tambahkan Buku</button>
+    </form>
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Cari buku...">
+    </div>
+    <div class="bookshelves">
+      <div class="bookshelf" id="unread-shelf">
+        <h2>Belum selesai dibaca</h2>
+        <div id="unread-list"></div>
+      </div>
+      <div class="bookshelf" id="read-shelf">
+        <h2>Selesai dibaca</h2>
+        <div id="read-list"></div>
+      </div>
+    </div>
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+      <button id="confirmDelete" class="delete-btn">Hapus</button>
+      <button id="cancelDelete" class="cancel-btn">Batal</button>
+    </div>
+  </div>
+  <script src="src/js/index.js"></script>
+</body>
+</html>
